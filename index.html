@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>FeedbackForm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Lesson Feedback</h2>
+        <p>Fill in the form below to help us imrpove the lesson quality.</p>
+        
+        <!-- <form id="feedbackForm">
+            <label for="name">Ismingiz (ixtiyoriy):</label>
+            <input type="text" id="name" placeholder="Ismingizni yozing...">
+
+            <label for="rating">Darsni baholang (1-5):</label>
+            <select id="rating">
+                <option value="5">⭐⭐⭐⭐⭐ - Zo'r</option>
+                <option value="4">⭐⭐⭐⭐ - Yaxshi</option>
+                <option value="3">⭐⭐⭐ - O'rtacha</option>
+                <option value="2">⭐⭐ - Qoniqarsiz</option>
+                <option value="1">⭐ - Yomon</option>
+            </select>
+
+            <label for="suggestion">Taklif va mulohazalaringiz:</label>
+            <textarea id="suggestion" rows="5" placeholder="Darsda nima yoqdi yoki nimalarni o'zgartirish kerak?"></textarea>
+
+            <button type="submit">Yuborish</button>
+        </form> -->
+
+        <form action="https://formspree.io/f/mpqqbgal" method="POST">
+            <label>Write your full name:</label><br>
+            <input type="text" name="student_name" required style="width: 100%; margin-bottom: 10px;"><br>
+        
+            <label for="rating">Rate the lesson (1-5):</label>
+            <select id="rating">
+                <option value="5">⭐⭐⭐⭐⭐ - Zo'r</option>
+                <option value="4">⭐⭐⭐⭐ - Yaxshi</option>
+                <option value="3">⭐⭐⭐ - O'rtacha</option>
+                <option value="2">⭐⭐ - Qoniqarsiz</option>
+                <option value="1">⭐ - Yomon</option>
+            </select>
+
+            <label>Write your opinion about the lesson (Feedback):</label><br>
+            <textarea name="feedback" required style="width: 100%; height: 100px;"></textarea><br>
+        
+            <button type="submit" style="padding: 10px 20px; background: #0acd75; color: white; border: none; cursor: pointer; border-radius: 5px;">
+                Submit
+            </button>
+        </form>
+
+
+    </div>
+</body>
+</html>

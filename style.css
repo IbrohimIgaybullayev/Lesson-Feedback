@@ -1,0 +1,67 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Style qismiga shuni qo'shing yoki o'zgartiring */
+.container{
+    width: 90%;          /* Telefonda ekran chetiga yopishib qolmasligi uchun */
+    max-width: 500px;    /* Kompyuterda belgilangan o'lchamdan oshib ketmasligi uchun */
+    margin: 0 auto;      /* Markazda turishi uchun */
+}
+
+h2 { color: #333; text-align: center; }
+
+label { display: block; margin-top: 15px; font-weight: bold; }
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* Paddingni hisobga olish uchun */
+}
+
+
+/* Input va Textarea hamma qurilmada chiroyli chiqishi uchun */
+input, textarea {
+    width: 100%;         /* Ichidagi elementlar qutidan chiqib ketmasin */
+    box-sizing: border-box; /* Padding hisobiga kenglik oshib ketmasligi uchun */
+}
+
+
+button {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover { background-color: #218838; }
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px; /* Telefonda sarlavha biroz kichikroq bo'ladi */
+    }
+    .konteyneringiz_nomi {
+        padding: 15px;  /* Chetdagi bo'shliqni kamaytiramiz */
+    }
+}

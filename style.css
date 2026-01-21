@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f7f6;
@@ -35,6 +36,70 @@ input, select, textarea {
     box-sizing: border-box; /* Paddingni hisobga olish uchun */
 }
 
+textarea {
+    font-family: inherit;      /* Asosiy shrift bilan bir xil bo'lishi uchun */
+    font-size: 16px;           /* Matn kattaligi */
+    font-weight: 500;           /* Qalinligi (400 - normal, 600 - qalin) */
+    line-height: 1.5;          /* Qatorlar orasidagi masofa */
+    color: #333;               /* Matn rangi to'qroq bo'lishi uchun */
+    padding: 12px;             /* Ichki bo'shliq */
+}
+
+input[type="text"] {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600; /* Yozuv qalinligi */
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+input[type="tel"] {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600; /* Yozuv qalinligi */
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Ikkala feedback blokini ajratish */
+.feedback-sections {
+    display: flex;
+    flex-direction: column; /* Telefonda ustma-ust turadi */
+    gap: 20px;
+    margin-top: 15px;
+}
+
+/* Yozuvlarni qalin va tushunarli qilish */
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600; /* Siz aytgandek qalin yozuv */
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+/* Fokus bo'lganda rang o'zgarishi */
+#positives:focus { border-color: #4CAF50; outline: none; } /* Yashil */
+#negatives:focus { border-color: #f44336; outline: none; } /* Qizil */
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+}
 
 /* Input va Textarea hamma qurilmada chiroyli chiqishi uchun */
 input, textarea {

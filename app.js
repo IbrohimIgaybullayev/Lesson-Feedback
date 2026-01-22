@@ -59,10 +59,20 @@ const form = document.getElementById('feedbackForm');
 const phoneInput = document.getElementById('phone');
 
 form.addEventListener('submit', function(e) {
-    // Agar raqam to'liq yozilmagan bo'lsa (+998 va 9 ta raqam = 17 ta belgi bo'shliqlar bilan)
-    if (phoneInput.value.length < 17) {
-        e.preventDefault(); // Formani yuborishni to'xtatish
-        alert("Write your phone number completely!");
+    const phoneValue = phoneInput.value.trim();
+    
+    // Agar input bo'sh bo'lmasa VA raqam to'liq bo'lmasa
+    // (Faqat "+998 " bo'lsa ham bo'sh deb hisoblaymiz)
+    if (phoneValue !== "" && phoneValue !== "+998" && phoneValue !== "+998 " && phoneValue.length < 17) {
+        e.preventDefault(); 
+        alert("Agar telefon raqam kiritmoqchi bo'lsangiz, iltimos uni to'liq yozing. Bo'sh qoldirsangiz ham bo'ladi.");
         phoneInput.focus();
+    }
+});
+
+// Telefon inputidan chiqib ketganda, agar ichida faqat "+998 " bo'lsa, uni tozalab qo'yish
+phoneInput.addEventListener('blur', function() {
+    if (this.value === "+998 " || this.value === "+998") {
+        this.value = "";
     }
 });
